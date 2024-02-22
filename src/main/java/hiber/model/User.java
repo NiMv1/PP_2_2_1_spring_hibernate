@@ -78,8 +78,8 @@ public class User {
               ", firstName='" + firstName + '\'' +
               ", lastName='" + lastName + '\'' +
               ", email='" + email + '\'' +
-              ", car_id=" + car.getId() + '\'' +
-              ", car='" + car +
-              '}';
+              ", car_id='" + car.getId() + '\'' +
+              "}" +
+              car;
    }
 }

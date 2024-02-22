@@ -45,8 +45,10 @@ public class MainApp {
          System.out.println();
       }
 
-      List<User> foundUser = userService.findUsersByCarModelOrSeries("BMW", 123);
+      List<User> foundUser = userService.findUsersByCarSeries(456);
+      List<User> foundUser2 = userService.findUsersByCarModelAndSeries("BMW", 123);
       System.out.println(foundUser);
+      System.out.println(foundUser2);
 
       context.close();
    }

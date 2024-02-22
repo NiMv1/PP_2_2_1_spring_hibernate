@@ -13,5 +13,8 @@ public interface UserService {
     void add(User user, Car car);
 
     @Transactional(readOnly = true)
-    List<User> findUsersByCarModelOrSeries(String model, Integer series);
+    List<User> findUsersByCarSeries(Integer series);
+
+    @Transactional(readOnly = true)
+    List<User> findUsersByCarModelAndSeries(String model, Integer series);
 }

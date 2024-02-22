@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,23 +42,27 @@ public class UserServiceImp implements UserService {
 
    @Override
    @Transactional(readOnly = true)
-   public List<User> findUsersByCarModelOrSeries(String model, Integer series) {
-      String hql = "select distinct u from User u join u.car c where";
+   public List<User> findUsersByCarSeries(Integer series) {
+      String hql = "select distinct u from User u join u.car c where c.series = :series";
+
+      return entityManager.createQuery(hql)
+              .setParameter("series", series)
+              .getResultList();
+   }
+
+   @Override
+   @Transactional(readOnly = true)
+   public List<User> findUsersByCarModelAndSeries(String model, Integer series) {
+      String hql = "select distinct u from User u join u.car c where 1=1";
       Map<String, Object> parameters = new HashMap<>();
 
-      if (model != null && series != null) {
-         hql += " c.model = :model and c.series = :series";
+      if (model != null) {
+         hql += " and c.model = :model";
          parameters.put("model", model);
+      }
+      if (series != null) {
+         hql += " and c.series = :series";
          parameters.put("series", series);
-      } else if (model != null) {
-         hql += " c.model = :model";
-         parameters.put("model", model);
-      } else if (series != null) {
-         hql += " c.series = :series";
-         parameters.put("series", series);
-      } else {
-         // Если не указаны ни модель, ни серия, возвращаем пустой список
-         return Collections.emptyList();
       }
 
       Query query = entityManager.createQuery(hql);

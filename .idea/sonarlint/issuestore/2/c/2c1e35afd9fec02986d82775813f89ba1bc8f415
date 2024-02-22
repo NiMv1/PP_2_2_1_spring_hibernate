@@ -1,11 +1,12 @@
 
 ‹
-java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(Á¯¦þ8òöšäÜ1
-G	java:S106$"+Replace this use of System.out by a logger.(ÂŒæí8ÿÆ’ãÜ1
-L	java:S106%"+Replace this use of System.out by a logger.(‘ßâàûÿÿÿÿ8ÿÆ’ãÜ1
-L	java:S106&"+Replace this use of System.out by a logger.(²¾ïþøÿÿÿÿ8ÿÆ’ãÜ1
-L	java:S106'"+Replace this use of System.out by a logger.(©Í­¾ûÿÿÿÿ8ÿÆ’ãÜ1
-G	java:S106*"+Replace this use of System.out by a logger.(ø¥©‡8€Ç’ãÜ1
-L	java:S106+"+Replace this use of System.out by a logger.(‹ðž¯ùÿÿÿÿ8€Ç’ãÜ1
-L	java:S106-"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8€Ç’ãÜ1
-L	java:S1061"+Replace this use of System.out by a logger.(ù¦¹ìÿÿÿÿÿ8¨À˜äÜ1
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(Á¯¦þ8‘´—ýÜ1
+G	java:S106$"+Replace this use of System.out by a logger.(ÂŒæí8–´—ýÜ1
+L	java:S106%"+Replace this use of System.out by a logger.(‘ßâàûÿÿÿÿ8–´—ýÜ1
+L	java:S106&"+Replace this use of System.out by a logger.(²¾ïþøÿÿÿÿ8—´—ýÜ1
+L	java:S106'"+Replace this use of System.out by a logger.(©Í­¾ûÿÿÿÿ8—´—ýÜ1
+G	java:S106*"+Replace this use of System.out by a logger.(ø¥©‡8—´—ýÜ1
+L	java:S106+"+Replace this use of System.out by a logger.(‹ðž¯ùÿÿÿÿ8˜´—ýÜ1
+L	java:S106-"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8˜´—ýÜ1
+L	java:S1062"+Replace this use of System.out by a logger.(ù¦¹ìÿÿÿÿÿ8š´—ýÜ1
+L	java:S1063"+Replace this use of System.out by a logger.(æ™í…üÿÿÿÿ8Ã¢™ýÜ1
